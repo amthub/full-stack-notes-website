@@ -1,0 +1,27 @@
+<%- include('./partials/header.ejs')%>
+<link rel="stylesheet" href="css/styles.css">
+<title><%= title %></title>
+</head>
+<body>
+    <div>
+        <%- include('./partials/logo.ejs')%>
+    </div>
+    <div class="flex">
+        <div>
+            <%- include('./partials/sidebar.ejs')%>
+        </div>
+        <div class="add-box">
+            <form action="" method="post">
+            <div >
+                <input type="text" placeholder="Topic" class="topic-name" name="topic" id="topic" required   value="<%= data.topic %>">
+            </div>
+            <div >
+                <textarea name="content" id="content" cols="70" rows="10" class="paragraph" placeholder="Enter Your Content Here" required 
+                ><%= data.content %></textarea>
+            </div>
+            <button type="submit" class="btn">Add</button>
+        </form>  
+        </div>
+    </div>
+    
+    <%- include('./partials/footer.ejs')%>  

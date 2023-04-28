@@ -1,0 +1,15 @@
+<div class="logo-container flex">
+  <div>
+    <h1>Blog-Tank</h1>
+  </div>
+
+  <ul class="ul">
+    <% if(user){ %> 
+    <li><%= user.email %></li>
+    <li><a href="/logout" class="btn link">Logout</a></li>
+    <% } else{ %> 
+    <li class="auth-btn"><a href="/login" class="link white">Login</a></li>
+    <li class="auth-btn"><a href="/signup" class="link white">Signup</a></li>
+    <% } %>
+  </ul>
+</div>
